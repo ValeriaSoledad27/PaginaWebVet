@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VET online</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <header>
+            <nav>
+                <a href="#" class="logo">
+                <img src="Imágenes/logo.png" alt="Logo">
+                </a>
+                <ul class="header">
+                    <li>
+                     <a href="#">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="Bienvenido">
+                <div class="inicio">
+                    <h1>Bienvenidos!</h1>
+                    <img src="Imágenes/imagen.png" alt="mascotas">
+                </div>
+            </section>
+            <section id="Formulario">
+                <div class="anteform">
+                <h2>Mascotas</h2>
+                <img src="Imágenes/vineta-violeta.svg" alt="subrayado">
+                <button class="Ingresar" type="button">INGRESAR MASCOTA</button>
+                </div>
+                <div>
+                    <form action="" class="form">
+                        <div>
+                            <fieldset>
+                                <legend>Mascota<span>*</span></legend>
+                                <input type="radio" id="gato" name="mascotas">
+                                <label for="gato">Gato</label>
+                                <input type="radio" id="perro" name="mascotas">
+                                <label for="perro">Perro</label></fieldset>
+                        </div>
+                        <div>
+                            <label for="nombre">Nombre<span>*</span></label>
+                            <input type="text" id="nombre" required>
+                        </div>
+                        <div>
+                            <label for="apodo">Apodo<span>*</span></label>
+                            <input type="text" id="apodo" required>
+                        </div>
+                        <div>
+                            <label for="edad">Edad aproximada<span>*</span></label>
+                            <input type="text" id="edad" required>
+                        </div>
+                        <div>
+                            <fieldset> 
+                                <legend>Sexo</legend>
+                                <input type="radio" id="macho" name="sexo">
+                                <label for="macho">Macho</label>
+                                <input type="radio" id="hembra" name="sexo">
+                                <label for="hembra">Hembra</label>
+
+                            </fieldset>
+                        </div>
+                        <div>
+                            <label for="descripcion">Descripción física<span>*</span></label>
+                            <textarea name="descripcion" id="descripcion" cols="25" rows="1" required></textarea>
+                        </div>
+                        <div class="bloque">
+                            <label for="caracteristicas">Características</label>
+                            <div class="fila-control">
+                                    <select name="caracteristicas" id="caracteristicas">
+                                        <option value="principal">Color principal</option>
+                                        <option value="secundario">Color secundario</option>
+                                        <option value="ojos">Color de ojos</option>
+                                        <option value="tamaño">Tamaño</option>
+                                        <option value="pelaje">Tipo de pelaje</option>
+                                        <option value="raza">Raza</option>
+                                    </select>
+                                <input type="text" placeholder="Ingresar característica">
+                                <button type="button" class="btn">+ Añadir característica</button>
+                           </div>
+                        </div>
+                        <div class="bloque">
+                            <label for="fotos">Fotos</label>
+                            <div class="fila-control fila-centrada">
+                            <input type="file" id="fotos">
+                            <button type="button" class="btn">+ Añadir foto</button>
+                            </div>
+                        </div>
+                        <div class="formfinal">
+                            <p>Los campos marcados con (*) son obligatorios</p>
+                            <button type="submit" class="guardar">GUARDAR</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="footer">
+        <section id="contacto">
+            <h2>Contactanos</h2>
+                <div class="contacto">
+                    <img src="Imágenes/vineta-blanca.svg" alt="subrayado" class="subrayado">
+                    <p><strong> En caso de dudas o consultas, podés comunicarte a través de los medios de contacto disponibles.</strong></p>
+                </div>
+                <div class="redes">
+                    <div class="item">
+                        <img src="Imágenes/tel.svg" alt="telefono">
+                        <div class="info">
+                            <p><strong>Teléfono</strong></p>
+                            <p>+54 9 11 5162 0516</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="Imágenes/mail.svg" alt="Email">
+                        <div class="info">
+                            <p><strong>Mail</strong></p>
+                            <a href="mailto:info@vetonline.com">info@vetonline.com</a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <hr class="linea-divisoria">
+        <p>Copyright © 2021. Todos los derechos reservados. Realizado por Think B. Intervenido por Valeria Bertini</p>
+    </footer>
+</body>

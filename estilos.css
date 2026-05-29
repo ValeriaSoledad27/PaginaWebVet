@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Este truco hace que los paddings no ensanchen las cajas */
+}
+.contenedor-principal {
+    width: 100%; /* O el ancho en píxeles que estés usando para tu diseño */
+    margin: 0 auto;    /* Centra todo el contenido en el monitor */
+    padding: 0;   /* Le da un airecito a los costados en pantallas chicas */
+}
+body {
+    background-color: #ececec;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita un pequeño margen blanco fantasma horizontal al usar el 100% del monitor */
+}
+
+header{
+    background: linear-gradient(#8341a1 40%, #7f3f9c 40%);
+    /* #8341a1 el otro color que va arriba del la barra de navegacion #7f3f9c es el otro que va abajo*/
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    height: 90px;
+    max-width: 1000px;  /* Le ponemos un límite de ancho */
+    margin: 0  auto;     /* '0' arriba/abajo y 'auto' a los costados hace que la caja se centre sola horizontalmente */
+    padding: 20px;      /* Un poquito de aire adentro para que cuando la pantalla sea chica no toque los bordes */
+}
+
+a{
+    text-decoration: none;
+    color: #ececec;
+}
+.logo img{
+    width: 180px;
+}
+.header{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+.header li a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+.inicio {
+    position: relative; /* Esto hace que el título no se vaya a cualquier lado de la pantalla */
+    width: 100%;
+    margin-bottom: 0px; /* Asegura que no empuje hacia abajo */
+    padding-bottom: 0px;
+}
+.inicio img {
+    width: 100%;       /* Obliga a la imagen a estirarse y ocupar el 100% del ancho de la pantalla */
+    height: auto;      /* Hace que el alto se acomode solo y de forma proporcional */
+    display: block;    /*Borra un espacio en blanco invisible y molesto que los navegadores le dejan abajo a las imágenes por defecto */
+}
+.inicio h1 {
+    position: absolute;  /* ¡Superpoder para flotar! */
+    top: 17%;            /* Lo baja hasta la mitad del contenedor */
+    left: 50%;           /* Lo lleva hasta la mitad horizontal */
+    transform: translate(-50%, -50%); /* Truco matemático para que quede perfectamente centrado */
+
+    color: #8341a1;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: Segoe UI, sans-serif;
+}
+.anteform {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;       /* Corregido: Centra verticalmente el título y el contenido de la fila */
+    position: relative;
+    max-width: 1200px;
+    padding: 20px;
+    
+    /* ── MÁRGENES ORDENADOS  ── */
+    margin-top: -90px;         /* Sube para pisar la imagen */
+    margin-bottom: 50px;       /* Separa del formulario */
+    margin-left: auto;         /* Centra la caja horizontalmente a la izquierda */
+    margin-right: auto;        /* Centra la caja horizontalmente a la derecha */
+}
+.anteform h2{
+    color: #8241a0;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: Segoe UI, sans-serif;
+    margin-bottom: 0px; /* Le dejamos un cachito de espacio abajo para la imagen */
+}
+.anteform img{
+    position: absolute; /* ¡Superpoder para flotar! */
+    width: 50px;
+    height: 10px;
+    bottom: 0px;       /* Se acomoda justo abajo del todo del contenedor */
+    left: 10;            /* Se alinea al inicio izquierdo del texto */
+}
+.Ingresar{
+    background-color: #ececec;
+    outline: none;             /* Elimina cualquier otra línea de selección molesta */
+    box-shadow: none;          /* Saca sombras internas viejas que simulan relieve */
+    color: #0a9cb2;
+    border: 1px solid #0a9cb2;
+    border-radius: 35px;
+    font-family: Calibri, sans-serif;
+    font-size: 1rem;
+    border-color: #5fbac8;
+    padding: 13px 35px;
+}
+.form{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Esto divide tu formulario en 3 columnas iguales  a full la ia*/
+    gap: 30px;                             /* Esto separa las preguntas para que no se encimen */
+    background-color: #ffffff;
+    font-family: Calibri, sans-serif;
+    font-weight: bold;
+    color: #3a3d4d;
+    border-radius: 20px;
+    flex-direction: column; /* Los da vuelta y los pone uno abajo del otro */
+    gap: 20px;              /* Separa las preguntas entre sí */
+    max-width: 1150px;       /* Para que el formulario no se estire feo a lo ancho */
+    padding: 30px;          /* Aire adentro del formulario */
+    margin: 0 auto;         /* Lo centra en la pantalla */
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1); /*/* DESPLAZAMIENTO X | DESPLAZAMIENTO Y | DIFUMINADO | TAMAÑO | COLOR */
+}
+.form p{
+    color: #7f3f9c;
+    font-family: Calibri, sans-serif;
+    font-weight: normal;
+}
+.form input[type="text"], 
+.form select, 
+.form textarea {
+    background-color: #eaeaea; /* El color gris claro del boceto */
+    border: none;              /* Le sacamos el borde negro finito de fábrica */
+    padding: 14px 20px;        /* Le damos altura y aire por dentro para que se pueda escribir cómodo */
+    border-radius: 30px;       /* ¡El secreto del boceto! Las esquinas súper redondeadas */
+    font-family: Segoe UI, sans-serif;   /* La tipografía limpia */
+    width: 100%;               /* Obliga a la cajita a ocupar todo el ancho de su columna */
+    box-sizing: border-box;    /* Evita que se rompa el tamaño por el padding */
+    outline: none;             /* Le saca esa línea molesta cuando hacés clic para escribir */
+}
+.form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centra los circulitos en su columna */
+    gap: 15px;               /* Separa un circulito del otro */
+}
+.form fieldset label {
+    font-weight: normal;     /* Le saca la negrita a "Gato" o "Macho" para que no compita con el título */
+    margin-left: 5px;        /* Separa la palabra del circulito */
+    cursor: pointer;
+}
+.form button[type="button"] {
+    background: none;         /* Le saca el fondo gris */
+    border: none;             /* Le saca el borde de fábrica */
+    color: #0099b8;           /* El color celeste/turquesa de tu botón Guardar */
+    font-family: Calibri, sans-serif;
+    font-weight:  bold;
+    font-size: 0.9rem;
+    cursor: pointer;          /* Hace que aparezca la manito al pasar el mouse */
+    margin-top: 5px;          /* Los separa un poquito de la caja de arriba */
+    align-self: center;       /* Los centra abajo de su respectivo campo */
+}
+/*Las dos instancias de la clase ocupan las 3 columnas de la grilla */
+.bloque {
+    grid-column: span 3;
+}
+/*Alineamos los elementos de adentro en un solo renglón */
+.fila-control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+/*Repartimos el espacio de forma inteligente */
+.fila-control select {
+    flex: 1; /* El select toma un espacio base */
+}
+
+.fila-control input[type="text"] {
+    flex: 2; /* El input de texto se estira el doble para que escribas cómodo */
+}
+
+.fila-control input[type="file"] {
+    flex: 0 1 auto; /* El botón de subir archivo mide solo lo que necesita */
+}
+/* Esta clase se encarga exclusivamente de mandar todo al centro horizontal */
+.fila-centrada {
+    justify-content: center;
+    gap: 30px; /* Le damos un poquito más de aire entre el botón de archivos y el "+ Añadir foto" */
+}
+/* Le damos un estilo específico a estos botones para que no hereden márgenes raros */
+.form .btn {
+    background: none;
+    border: none;
+    color: #0099b8;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 0.85rem;
+    cursor: pointer;
+    white-space: nowrap;    /* Evita que el texto del botón se parta en dos renglones */
+    padding: 5px 10px;
+}
+.formfinal{
+        grid-column: span 3; /* estira a lo ancho de las 3 columnas" */
+        /* Y ahora usamos Flexbox para mandar el botón a la derecha */
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        margin-top: 20px;
+}
+.guardar{
+    color: #ececec;
+    font-family: Calibri, sans-serif;
+    font-size: 1rem;
+    background-color: #0a9cb2;
+    padding: 13px 30px;
+    border-radius: 20px;
+    border: 0px;
+}
+span{
+    color: #7f3f9c;
+}
+
+footer {
+    width: 100%;
+    min-height: 500px; /* Le da el alto necesario para que se luzca la ola */
+    
+    background-image: url('Imágenes/footer-bg.svg'); /* Tu ruta */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;      
+    justify-content: space-between; /* Deja el contacto arriba y tira el copyright abajo de todo */
+    
+    padding-top: 180px;    /* Espacio para que el título "Contactanos" no tape la curva */
+    padding-bottom: 25px;  /* Despega el copyright del piso de la pantalla */
+    margin-top: 80px;
+    box-sizing: border-box;
+    /*border: 3px solid red;*/
+}
+.footer p{
+    font-size: 0.85rem;
+    margin: 0;
+    color: #ececec;
+}
+#contacto{
+    color: #eaeaea;
+    text-align: center;
+    max-width: 700px; /* Evita que el texto largo se estire feo */
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+#contacto h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+.subrayado {
+    margin-bottom: 20px;
+}
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 80px;        /* Más espacio de separación entre Teléfono y Mail como el boceto */
+    margin-top: 20px;
+}
+.item {
+    display: flex;
+    align-items: center;
+    gap: 15px;        /* Separa el icono redondo de las palabras */
+    text-align: left; /* Alinea el texto interno a la izquierda */
+}
+.redes img {
+    width: 45px; /* Tamaño de tus iconos */
+    height: 45px;
+}
+.redes p, .redes a{
+    color: #ececec;
+    margin: 0;
+    text-decoration: none;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+hr {
+    width: 80%;
+    max-width: 1000px;
+    border: none;
+    border-top: 1px solid #ececec; /* Línea blanca con transparencia */
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+    nav{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 20px;
+    }
+    .inicio h1{
+        font-size: 1.8rem;
+        top: 25%;
+        width: 90%;
+        text-align: center;
+    }
+    .anteform{
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        margin-top: -40px;
+    }
+    .anteform img{
+        display: none;
+    }
+    .form{
+        grid-template-columns: 1fr;
+    }
+
+    .bloque,
+    .formfinal{
+        grid-column: span 1;
+    }
+
+    .fila-control{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .redes{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
